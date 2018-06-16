@@ -28,13 +28,11 @@ class App extends Component {
   }
 
   removeTodoHandler = (todoId) => {
-    console.log(todoId)
     const todolist = [...this.state.todosList];
     const newtodo = todolist.filter((todo) => todo.id != parseInt(todoId))
     this.setState(prevState => ({
       todosList: [...newtodo]
     }))
-    console.log(newtodo)
   }
 
   updateInput = (e) => {
