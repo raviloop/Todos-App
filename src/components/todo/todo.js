@@ -5,10 +5,15 @@ const todo = (props) => {
 
     const checkedStyle = {
         color: '#D8D8D8',
-        textDecoration : 'line-through'
+        textDecoration: 'line-through'
+    }
+    const crossStyle = {
+        fontSize: '30px',
+        color: '#B25257'
     }
 
     return (
+
         <div className="Todo">
             <div className="List pretty p-default p-round">
                 <input type="checkbox" id={props.id} checked={props.isChecked} onChange={props.handleCheck} />
@@ -18,9 +23,15 @@ const todo = (props) => {
                         style={props.isChecked ? checkedStyle : null}>
                         {props.name}
                     </label>
-
                 </div>
             </div>
+            <button
+                id="btn-remove"
+                className="transparent-button"
+                onClick={props.removeTodo}
+                style={{ float: 'right', display: 'none' }}>
+                <i className="fa fa-close" todoid={props.id} style={crossStyle}></i>
+            </button>
         </div>
 
     )

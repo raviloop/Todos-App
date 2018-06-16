@@ -6,14 +6,11 @@ class App extends Component {
 
   state = {
     input: '',
-    todosList: [
-      { id: 1, name: 'something', isChecked: true },
-      { id: 2, name: 'intersting', isChecked: false },
-      { id: 3, name: 'will happen', isChecked: false },
-    ]
+    // todosList: [{'id':1,'name':'something','isChecked':false}]
+    todosList: []
   }
 
-  addTodo = (e) => {
+  addTodoHandler = (e) => {
     if (e.key === 'Enter') {
       const todo = {
         id: this.state.todosList.length + 1,
@@ -25,6 +22,16 @@ class App extends Component {
         input: ''
       }));
     }
+  }
+
+  removeTodoHandler = (todoId) => {
+    console.log(todoId)
+    const todolist = [...this.state.todosList];
+    const newtodo = todolist.filter((todo) => todo.id != parseInt(todoId))
+    this.setState(prevState => ({
+      todosList: [...newtodo]
+    }))
+    console.log(newtodo)
   }
 
   updateInput = (e) => {
@@ -54,10 +61,11 @@ class App extends Component {
         <AddBar
           input={this.state.input}
           updateInput={this.updateInput}
-          onAddition={this.addTodo} />
+          onAddition={this.addTodoHandler} />
         <TodoList
           todos={this.state.todosList}
           handleCheck={(todoId) => this.checkboxHandler(todoId)}
+          removeTodo={(todoId) => this.removeTodoHandler(todoId)}
         />
       </div>
     );

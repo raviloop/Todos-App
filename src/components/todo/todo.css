@@ -8,10 +8,24 @@
     caret-color: #888888;
     font-size: 32px;
     background-color: #FEFEFE;
+    color :#5B5B5B;
 }
 
 .Todo .List{
-    /* padding: 4px; */
     margin-top : 13px;
     margin-left : 13px;
+}
+
+.Todo:hover  #btn-remove {
+    display: block !important;
+
+}
+
+ .transparent-button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
 }
