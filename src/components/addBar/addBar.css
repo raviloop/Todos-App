@@ -1,0 +1,35 @@
+.InputTodo {
+  text-align: center;
+}
+
+.InputTodo input {
+  margin: 0 auto;
+  height: 60px;
+  width: 400px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px #888888;
+  caret-color: #888888;
+  font-size: 32px;
+  background-color: #FEFEFE;
+}
+
+.InputTodo input:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  color: #888888;
+}
+:-moz-placeholder {
+  font-style: italic;
+  color: #888888;
+}
+::-moz-placeholder {
+  font-style: italic;
+  color: #888888;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+  color: #888888;
+}
