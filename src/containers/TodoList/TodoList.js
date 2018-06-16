@@ -14,6 +14,16 @@ class TodoList extends React.Component {
 
     render() {
         let todos = this.props.todos;
+        switch (this.props.currentState) {
+            case 'ACTIVE':
+                todos = todos.filter((todo) => !todo.isChecked);
+                break;
+            case 'COMPLETED':
+                todos = todos.filter((todo) => todo.isChecked);
+                break;
+            default:
+                break;
+        }
         return (
             todos.map(todo => <Todo
                 key={todo.name + Math.random().toString()}

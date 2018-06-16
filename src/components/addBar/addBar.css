@@ -1,8 +1,19 @@
 .InputTodo {
   text-align: center;
 }
+.InputTodo i {
+  border: solid #E5E5E5;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+}
 
-.InputTodo input {
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.InputTodo  {
   margin: 0 auto;
   height: 60px;
   width: 400px;
@@ -13,8 +24,16 @@
   background-color: #FEFEFE;
 }
 
+.InputTodo input {
+  width: 80%;
+  height: 55px;
+outline: none !important;
+  font-size: 28px;
+
+}
+
 .InputTodo input:focus {
-    outline: none;
+    outline: none !important;
 }
 
 ::-webkit-input-placeholder {
