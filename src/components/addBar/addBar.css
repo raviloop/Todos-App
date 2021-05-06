@@ -22,6 +22,7 @@
   caret-color: #888888;
   font-size: 32px;
   background-color: #FEFEFE;
+  border-radius: 2rem;
 }
 
 .InputTodo input {
@@ -29,6 +30,7 @@
   height: 55px;
 outline: none !important;
   font-size: 28px;
+  text-align: center;
 
 }
 
