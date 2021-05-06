@@ -9,6 +9,8 @@
     font-size: 32px;
     background-color: #FEFEFE;
     color :#5B5B5B;
+    margin-top: 1rem;
+    border-radius: 3rem;
 }
 
 .Todo .List{
@@ -28,4 +30,5 @@
     cursor:pointer;
     overflow: hidden;
     outline:none;
+    
 }
